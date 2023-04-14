@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="container">
+    <form class="px- py-3">
+        <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" name='email' class="form-control" id="exampleDropdownFormEmail1"
+                placeholder="email@example.com" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name='password' class="form-control" id="exampleDropdownFormPassword1"
+                placeholder="Password" />
+        </div>
+        <button type='button' class="btn btn-primary" >Sign in</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" routerLink="/register">New around here? Sign up</a>
+    <a class="dropdown-item" routerLink="/forget-password">Forgot password?</a>
+</div>

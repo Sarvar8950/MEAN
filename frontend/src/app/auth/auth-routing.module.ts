@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthHomeComponent } from './auth-home/auth-home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 const routes: Routes = [
-  { path: '', component: AuthHomeComponent },
-  // { path: '/', component: ComponentsModule },
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'forget-password', component: ForgetPasswordComponent },
+  { path: 'core', loadChildren: () => import("../components/components.module").then(m => m.ComponentsModule) },
 ];
 
 @NgModule({
