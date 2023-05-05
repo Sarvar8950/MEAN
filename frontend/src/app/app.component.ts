@@ -14,9 +14,14 @@ export class AppComponent {
     public router : Router
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   home() {
+    this.router.navigate(['/login'])
+  }
+
+  logout() {
     this.router.navigate(['/login'])
   }
 

@@ -28,9 +28,11 @@ export class LoginComponent {
     console.log(this.loginForm.value)
     if(this.loginForm.valid) {
       this.http.login(this.loginForm.value).subscribe((res:any) => {
-        console.log(res)
+        console.log({...res.data, token: res.token})
         if(res.responseStatus == "SUCCESS") {
-          this.router.navigate(['core/dashboard'])
+          let data = {...res.data, token:res.token}
+          sessionStorage.setItem("userDetails", JSON.stringify(data))
+          this.router.navigate(['/core/dashboard'])
         }
       }, (err) => {
         console.log(err)
