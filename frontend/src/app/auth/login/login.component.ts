@@ -32,7 +32,7 @@ export class LoginComponent {
         if(res.responseStatus == "SUCCESS") {
           let data = {...res.data, token:res.token}
           sessionStorage.setItem("userDetails", JSON.stringify(data))
-          this.router.navigate(['/core/dashboard'])
+          this.router.navigate(['/dashboard'])
         }
       }, (err) => {
         console.log(err)

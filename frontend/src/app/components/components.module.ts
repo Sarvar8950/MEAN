@@ -8,6 +8,8 @@ import { ChartsComponent } from './charts/charts.component';
 import { ChatComponent } from './chating/chat/chat.component';
 import { MessageComponent } from './chating/message/message.component';
 import { ComponentsRoutingModule } from './components-routing.module';
+import { ComponentsComponent } from './components.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,11 +21,14 @@ import { ComponentsRoutingModule } from './components-routing.module';
     ListItemComponent,
     ChartsComponent,
     ChatComponent,
-    MessageComponent
+    MessageComponent,
+    ComponentsComponent
   ],
   imports: [
     CommonModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ComponentsModule { }

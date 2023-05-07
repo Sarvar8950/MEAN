@@ -1,1 +1,16 @@
-<p>form works!</p>
+<div class="container">
+    <form class="px- py-3" [formGroup]="todoForm">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="title" name='title' class="form-control" id="title"
+                placeholder="title" formControlName="title" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="description" name='description' class="form-control" id="description"
+                placeholder="description" formControlName="description"/>
+        </div>
+        <button type='button' class="btn btn-primary" (click)="submit()">Submit</button> &nbsp;
+        <button type='button' class="btn btn-warning" (click)="clear()">Cancel</button>
+    </form>
+</div>
